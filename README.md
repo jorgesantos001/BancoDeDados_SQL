@@ -2,7 +2,7 @@
 
 # Cenário :bookmark_tabs:
 
-A empresa "Banco AAA" está buscando a implementação de um novo sistema de controle bancário para aprimorar suas operações diárias, melhorar a eficiência do atendimento ao cliente e garantir maior segurança no gerenciamento de dados financeiros. Este sistema terá como foco principal a gestão de clientes, suas contas, transações financeiras e produtos financeiros oferecidos pelo banco.
+A empresa "Banco Tech" está buscando a implementação de um novo sistema de controle bancário para aprimorar suas operações diárias, melhorar a eficiência do atendimento ao cliente e garantir maior segurança no gerenciamento de dados financeiros. Este sistema terá como foco principal a gestão de clientes, suas contas, transações financeiras e produtos financeiros oferecidos pelo banco.
 As principais funcionalidades do banco de dados dessa empresa incluem clientes, contas bancárias, transações financeiras, produtos financeiros e funcionários. Com campos específicos que armazenam informações relevantes para o funcionamento do banco.
 Um cliente pode ter uma ou várias contas bancárias, e cada conta bancária está associada a um único cliente. Da mesma forma, uma transação financeira está vinculada a uma conta bancária específica.
 Além disso, o sistema contempla a oferta de produtos financeiros, como empréstimos pessoais e investimentos em renda fixa, e os clientes podem aderir a esses produtos.
