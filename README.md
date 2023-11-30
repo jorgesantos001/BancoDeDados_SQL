@@ -1,5 +1,7 @@
 # Banco de dados - SQL 	:books:
 
+Este banco de dados foi criado em um trabalho do primeiro semestre da faculdade de Desenvolvimento de Software Multiplataforma, na Fatec Franca.
+
 # Cenário :bookmark_tabs:
 
 A empresa "Banco Tech" está buscando a implementação de um novo sistema de controle bancário para aprimorar suas operações diárias, melhorar a eficiência do atendimento ao cliente e garantir maior segurança no gerenciamento de dados financeiros. Este sistema terá como foco principal a gestão de clientes, suas contas, transações financeiras e produtos financeiros oferecidos pelo banco.
