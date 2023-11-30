@@ -16,7 +16,6 @@ Além disso, o sistema contempla a oferta de produtos financeiros, como emprést
 # Modelagem Lógica 	:card_index_dividers:
 
 
-<img src="img/modelo_logico.png">
 
 
 # Dados 	:bar_chart:
