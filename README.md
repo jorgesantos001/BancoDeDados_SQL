@@ -1,13 +1,13 @@
-# Banco de dados - SQL
+# Banco de dados - SQL 	:books:
 
-# Cenário
+# Cenário :bookmark_tabs:
 
 A empresa "Banco AAA" está buscando a implementação de um novo sistema de controle bancário para aprimorar suas operações diárias, melhorar a eficiência do atendimento ao cliente e garantir maior segurança no gerenciamento de dados financeiros. Este sistema terá como foco principal a gestão de clientes, suas contas, transações financeiras e produtos financeiros oferecidos pelo banco.
 As principais funcionalidades do banco de dados dessa empresa incluem clientes, contas bancárias, transações financeiras, produtos financeiros e funcionários. Com campos específicos que armazenam informações relevantes para o funcionamento do banco.
 Um cliente pode ter uma ou várias contas bancárias, e cada conta bancária está associada a um único cliente. Da mesma forma, uma transação financeira está vinculada a uma conta bancária específica.
 Além disso, o sistema contempla a oferta de produtos financeiros, como empréstimos pessoais e investimentos em renda fixa, e os clientes podem aderir a esses produtos.
 
-# Modelagem Conceitual
+# Modelagem Conceitual 	:card_index_dividers:
 Lucidchart:
 https://lucid.app/lucidspark/5642d32b-78fc-4991-a3a8-63934729a43c/edit?invitationId=inv_6be1ef97-9ef8-4178-9cc9-80456c8d3e7d&page=0_0#
 
@@ -15,7 +15,7 @@ Print:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/ce618faf-cd69-4e85-8f67-6566ee55d213
 
 
-# Modelagem Lógica
+# Modelagem Lógica 	:card_index_dividers:
 Lucidchart:
 https://lucid.app/lucidchart/b077b125-cb70-49eb-86bd-122fe089927c/edit?invitationId=inv_6c38eea5-845e-4adc-ba1b-e3eb09017e3a&page=0_0#
 
@@ -23,7 +23,7 @@ Print:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/667e6cb7-bf70-4dc0-a8b5-6ea26127fbcd
 
 
-# Dados
+# Dados 	:bar_chart:
 use banco
 go
 
@@ -231,9 +231,9 @@ VALUES
 
 SELECT id_cliente FROM cliente_produto_financeiro where id_produto = 6;
 
-# Relatórios
+# Relatórios :memo:
 
-Consulta 1: Informações Detalhadas do Cliente e suas Contas:
+:desktop_computer: Consulta 1: Informações Detalhadas do Cliente e suas Contas:
 
 SELECT c.id_cliente, c.nome, c.cpf, cb.id_conta, cb.tipo, cb.saldo
 FROM cliente c
@@ -242,7 +242,7 @@ JOIN conta cb ON c.id_cliente = cb.id_cliente;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/6cb46814-4b54-4840-97e6-e20cec52aad5
 
-Consulta 2: Transações Realizadas por um Cliente:
+:desktop_computer: Consulta 2: Transações Realizadas por um Cliente:
 SELECT c.nome, t.id_transacao, t.tipo, t.valor, t.data
 FROM cliente c
 JOIN conta cb ON c.id_cliente = cb.id_cliente
@@ -252,7 +252,7 @@ WHERE c.nome = 'João Silva';
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/ae375dc2-79b8-49dd-a3d1-63db70a78e52
 
-Consulta 3: Produtos Financeiros Associados a uma Conta Bancária:
+:desktop_computer: Consulta 3: Produtos Financeiros Associados a uma Conta Bancária:
 SELECT c.nome, cb.id_conta, pf.nome AS produto_financeiro
 FROM cliente c
 JOIN conta cb ON c.id_cliente = cb.id_cliente
@@ -262,7 +262,7 @@ JOIN produto_financeiro pf ON cpf.id_produto = pf.id_produto;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/81a5bc64-21f4-4e9f-b733-d9d6207aa3d7
 
-Consulta 4: Saldo Atual de Todas as Contas Bancárias:
+:desktop_computer: Consulta 4: Saldo Atual de Todas as Contas Bancárias:
 
 SELECT cb.id_conta, c.nome, cb.saldo
 FROM conta cb
@@ -272,7 +272,7 @@ ORDER BY cb.saldo DESC;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/1f3314ef-3c58-419b-86d9-033c36947840
 
-Consulta 5: Histórico de Transações por Tipo e Valor:
+:desktop_computer: Consulta 5: Histórico de Transações por Tipo e Valor:
 
 SELECT t.tipo, t.valor, t.data, c.nome AS cliente, cb.id_conta
 FROM transacao t
@@ -284,7 +284,7 @@ ORDER BY t.data DESC;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/dfac03bd-8e70-442b-b494-46a1a1ed0786
 
-Consulta 6: Produtos Financeiros com Taxa de Juros Superior a 7%
+:desktop_computer: Consulta 6: Produtos Financeiros com Taxa de Juros Superior a 7%
 
 SELECT nome, descricao, taxa_juros
 FROM produto_financeiro
@@ -293,7 +293,7 @@ WHERE taxa_juros > 7;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/a028afa9-dd91-4054-a261-3da064a24cb1
 
-Consulta 7: Clientes que Adquiriram Produtos Financeiros:
+:desktop_computer: Consulta 7: Clientes que Adquiriram Produtos Financeiros:
 
 SELECT c.nome, pf.nome AS produto_financeiro
 FROM cliente c
@@ -303,7 +303,7 @@ JOIN produto_financeiro pf ON cpf.id_produto = pf.id_produto;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/84caa4c9-776f-47ae-a65a-fc54b7c88953
 
-Consulta 8: Lista de funcionários ordenados por data de contratação (do mais novo para o mais antigo):
+:desktop_computer: Consulta 8: Lista de funcionários ordenados por data de contratação (do mais novo para o mais antigo):
 
 SELECT nome, data_contratacao
 FROM funcionario
@@ -312,7 +312,7 @@ ORDER BY data_contratacao DESC;
 imagem: 
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/4e476e35-05c0-4ce3-b3cf-87bf0c6bc447
 
-Consulta 9: Soma total do saldo de todas as contas:
+:desktop_computer: Consulta 9: Soma total do saldo de todas as contas:
 
 SELECT SUM(saldo) AS saldo_total
 FROM conta;
@@ -320,7 +320,7 @@ FROM conta;
 imagem:
 https://github.com/jorgesantos001/sql_dsm/assets/141787356/f6930327-3414-4b50-a8db-08793520f837
 
-Consulta 10: Funcionários que são Gerentes de Contas
+:desktop_computer: Consulta 10: Funcionários que são Gerentes de Contas
 
 SELECT *
 FROM funcionario
