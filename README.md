@@ -9,20 +9,14 @@ Além disso, o sistema contempla a oferta de produtos financeiros, como emprést
 
 # Modelagem Conceitual 	:card_index_dividers:
 
-<img src="img/modelo_conceitual.png">
-Lucidchart:
-https://lucid.app/lucidspark/5642d32b-78fc-4991-a3a8-63934729a43c/edit?invitationId=inv_6be1ef97-9ef8-4178-9cc9-80456c8d3e7d&page=0_0#
 
-Print:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/ce618faf-cd69-4e85-8f67-6566ee55d213
+<img src="img/modelo_conceitual.png">
 
 
 # Modelagem Lógica 	:card_index_dividers:
-Lucidchart:
-https://lucid.app/lucidchart/b077b125-cb70-49eb-86bd-122fe089927c/edit?invitationId=inv_6c38eea5-845e-4adc-ba1b-e3eb09017e3a&page=0_0#
 
-Print:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/667e6cb7-bf70-4dc0-a8b5-6ea26127fbcd
+
+<img src="img/modelo_logico.png">
 
 
 # Dados 	:bar_chart:
@@ -233,6 +227,8 @@ VALUES
 
 SELECT id_cliente FROM cliente_produto_financeiro where id_produto = 6;
 
+<img src="img/modelagem_fisica.png">
+
 # Relatórios :memo:
 
 :desktop_computer: Consulta 1: Informações Detalhadas do Cliente e suas Contas:
@@ -241,8 +237,7 @@ SELECT c.id_cliente, c.nome, c.cpf, cb.id_conta, cb.tipo, cb.saldo
 FROM cliente c
 JOIN conta cb ON c.id_cliente = cb.id_cliente;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/6cb46814-4b54-4840-97e6-e20cec52aad5
+<img src="img/consulta1.png">
 
 :desktop_computer: Consulta 2: Transações Realizadas por um Cliente:
 SELECT c.nome, t.id_transacao, t.tipo, t.valor, t.data
@@ -251,8 +246,7 @@ JOIN conta cb ON c.id_cliente = cb.id_cliente
 JOIN transacao t ON cb.id_conta = t.id_conta
 WHERE c.nome = 'João Silva';
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/ae375dc2-79b8-49dd-a3d1-63db70a78e52
+<img src="img/consulta2.png">
 
 :desktop_computer: Consulta 3: Produtos Financeiros Associados a uma Conta Bancária:
 SELECT c.nome, cb.id_conta, pf.nome AS produto_financeiro
@@ -261,8 +255,7 @@ JOIN conta cb ON c.id_cliente = cb.id_cliente
 JOIN cliente_produto_financeiro cpf ON c.id_cliente = cpf.id_cliente
 JOIN produto_financeiro pf ON cpf.id_produto = pf.id_produto;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/81a5bc64-21f4-4e9f-b733-d9d6207aa3d7
+<img src="img/consulta3.png">
 
 :desktop_computer: Consulta 4: Saldo Atual de Todas as Contas Bancárias:
 
@@ -271,8 +264,7 @@ FROM conta cb
 JOIN cliente c ON cb.id_cliente = c.id_cliente
 ORDER BY cb.saldo DESC;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/1f3314ef-3c58-419b-86d9-033c36947840
+<img src="img/consulta4.png">
 
 :desktop_computer: Consulta 5: Histórico de Transações por Tipo e Valor:
 
@@ -283,8 +275,7 @@ JOIN cliente c ON cb.id_cliente = c.id_cliente
 WHERE t.tipo = 'Depósito' AND t.valor > 1000
 ORDER BY t.data DESC;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/dfac03bd-8e70-442b-b494-46a1a1ed0786
+<img src="img/consulta5.png">
 
 :desktop_computer: Consulta 6: Produtos Financeiros com Taxa de Juros Superior a 7%
 
@@ -292,8 +283,7 @@ SELECT nome, descricao, taxa_juros
 FROM produto_financeiro
 WHERE taxa_juros > 7;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/a028afa9-dd91-4054-a261-3da064a24cb1
+<img src="img/consulta6.png">
 
 :desktop_computer: Consulta 7: Clientes que Adquiriram Produtos Financeiros:
 
@@ -302,8 +292,7 @@ FROM cliente c
 JOIN cliente_produto_financeiro cpf ON c.id_cliente = cpf.id_cliente
 JOIN produto_financeiro pf ON cpf.id_produto = pf.id_produto;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/84caa4c9-776f-47ae-a65a-fc54b7c88953
+<img src="img/consulta7.png">
 
 :desktop_computer: Consulta 8: Lista de funcionários ordenados por data de contratação (do mais novo para o mais antigo):
 
@@ -311,16 +300,14 @@ SELECT nome, data_contratacao
 FROM funcionario
 ORDER BY data_contratacao DESC;
 
-imagem: 
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/4e476e35-05c0-4ce3-b3cf-87bf0c6bc447
+<img src="img/consulta8.png">
 
 :desktop_computer: Consulta 9: Soma total do saldo de todas as contas:
 
 SELECT SUM(saldo) AS saldo_total
 FROM conta;
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/f6930327-3414-4b50-a8db-08793520f837
+<img src="img/consulta9.png">
 
 :desktop_computer: Consulta 10: Funcionários que são Gerentes de Contas
 
@@ -328,8 +315,7 @@ SELECT *
 FROM funcionario
 WHERE cargo = 'Gerente de Contas';
 
-imagem:
-https://github.com/jorgesantos001/sql_dsm/assets/141787356/f69abb85-49a8-42cf-8d0e-49d5307acd45
+<img src="img/consulta10.png">
 
 
 
