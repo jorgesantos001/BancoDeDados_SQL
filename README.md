@@ -8,6 +8,8 @@ Um cliente pode ter uma ou várias contas bancárias, e cada conta bancária est
 Além disso, o sistema contempla a oferta de produtos financeiros, como empréstimos pessoais e investimentos em renda fixa, e os clientes podem aderir a esses produtos.
 
 # Modelagem Conceitual 	:card_index_dividers:
+
+<img src="img/modelo_conceitual.png">
 Lucidchart:
 https://lucid.app/lucidspark/5642d32b-78fc-4991-a3a8-63934729a43c/edit?invitationId=inv_6be1ef97-9ef8-4178-9cc9-80456c8d3e7d&page=0_0#
 
