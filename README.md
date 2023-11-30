@@ -240,6 +240,7 @@ JOIN conta cb ON c.id_cliente = cb.id_cliente;
 <img src="img/consulta1.png">
 
 :desktop_computer: Consulta 2: Transações Realizadas por um Cliente:
+
 SELECT c.nome, t.id_transacao, t.tipo, t.valor, t.data
 FROM cliente c
 JOIN conta cb ON c.id_cliente = cb.id_cliente
@@ -249,6 +250,7 @@ WHERE c.nome = 'João Silva';
 <img src="img/consulta2.png">
 
 :desktop_computer: Consulta 3: Produtos Financeiros Associados a uma Conta Bancária:
+
 SELECT c.nome, cb.id_conta, pf.nome AS produto_financeiro
 FROM cliente c
 JOIN conta cb ON c.id_cliente = cb.id_cliente
